@@ -39,7 +39,6 @@ $(function () {
   var today = dayjs();
   $('#date').text(today.format('dddd, MMMM D YYYY, h:mm a'))
   var hour = dayjs().hour();
- //Need to create function to paresint string value of block to numerical value to compare in if statement
 
   $('#hour-9').click(function(){
     $(this)
@@ -66,11 +65,11 @@ $(function () {
   } else {
     $('#hour-10').addClass('future')
   }
+
   $('#hour-11').click(function(){
     $(this)
     localStorage.setItem('#hour-11', elevenAM.value);
     localStorage.getItem('#hour-11');
-   // console.log(document.querySelector('#hour-11').dataset.hour);
   })
   if (hourEleven < hour) {
     $('#hour-11').addClass('past')
@@ -79,6 +78,7 @@ $(function () {
   } else {
     $('#hour-11').addClass('future')
   }
+
   $('#hour-12').click(function(){
     $(this)
     localStorage.setItem('#hour-12', twelvePM.value);
@@ -91,6 +91,7 @@ $(function () {
   } else {
     $('#hour-12').addClass('future')
   }
+
   $('#hour-1').click(function(){
     $(this)
     localStorage.setItem('#hour-1', onePM.value);
@@ -103,6 +104,7 @@ $(function () {
   } else {
     $('#hour-1').addClass('future')
   }
+
   $('#hour-2').click(function(){
     $(this)
     localStorage.setItem('#hour-2', twoPM.value);
@@ -115,6 +117,7 @@ $(function () {
   } else {
     $('#hour-2').addClass('future')
   }
+
   $('#hour-3').click(function(){
     $(this)
     localStorage.setItem('#hour-3', threePM.value);
@@ -127,6 +130,7 @@ $(function () {
   } else {
     $('#hour-3').addClass('future')
   }
+
   $('#hour-4').click(function(){
     $(this)
     localStorage.setItem('#hour-4', fourPM.value);
@@ -152,17 +156,4 @@ $(function () {
     } else {
       $('#hour-5').addClass('future')
     }
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
-
-
 });
